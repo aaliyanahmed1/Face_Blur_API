@@ -1,0 +1,262 @@
+[MASTER]
+# Python code to execute, usually for sys.path manipulation
+init-hook='import sys; sys.path.append(".")'
+
+# Use multiple processes to speed up Pylint
+jobs=0
+
+# Control the amount of potential inferred values when inferring a single
+# object
+limit-inference-results=100
+
+# List of plugins (as comma separated values of python modules names) to load
+# with pylint.load_plugin
+load-plugins=
+
+# Pickle collected data for later comparisons
+persistent=yes
+
+# Minimum Python version to use for version dependent checks
+py-version=3.9
+
+# When enabled, pylint would attempt to guess common misconfiguration and emit
+# user-friendly hints instead of false-positive error messages
+suggestion-mode=yes
+
+# Allow loading of arbitrary C extensions. Extensions are imported into the
+# active Python interpreter and may run arbitrary code
+unsafe-load-any-extension=no
+
+[MESSAGES CONTROL]
+# Only show warnings with the listed confidence levels
+confidence=
+
+# Disable the message, report, category or checker with the given id(s)
+disable=raw-checker-failed,
+        bad-inline-option,
+        locally-disabled,
+        file-ignored,
+        suppressed-message,
+        useless-suppression,
+        deprecated-pragma,
+        use-symbolic-message-instead,
+        missing-module-docstring,
+        missing-class-docstring,
+        missing-function-docstring,
+        too-few-public-methods,
+        too-many-arguments,
+        too-many-instance-attributes,
+        too-many-locals,
+        too-many-branches,
+        too-many-statements,
+        too-many-public-methods,
+        too-many-return-statements,
+        too-many-boolean-expressions,
+        too-many-nested-blocks,
+        import-error,
+        no-member
+
+# Enable the message, report, category or checker with the given id(s)
+enable=c-extension-no-member
+
+[FORMAT]
+# Expected format of line ending
+expected-line-ending-format=
+
+# Regexp for a line that is allowed to be longer than the limit
+ignore-long-lines=^\s*(# )?<?https?://\S+>?$
+
+# Number of spaces of indent required inside a hanging or continued line
+indent-after-paren=4
+
+# String used as indentation unit
+indent-string='    '
+
+# Maximum number of characters on a single line
+max-line-length=120
+
+# Maximum number of lines in a module
+max-module-lines=1000
+
+# Allow the body of a class to be on the same line as the declaration
+single-line-class-stmt=no
+
+# Allow the body of an if to be on the same line as the test if there is no
+# else
+single-line-if-stmt=no
+
+[BASIC]
+# Naming style matching correct argument names
+argument-naming-style=snake_case
+
+# Regular expression matching correct argument names
+argument-rgx=[a-z_][a-z0-9_]{2,30}$
+
+# Naming style matching correct attribute names
+attr-naming-style=snake_case
+
+# Regular expression matching correct attribute names
+attr-rgx=[a-z_][a-z0-9_]{2,30}$
+
+# Bad variable names which should always be refused
+bad-names=foo,
+          bar,
+          baz,
+          toto,
+          tutu,
+          tata
+
+# Bad variable names regexes
+bad-names-rgx=
+
+# Naming style matching correct class attribute names
+class-attribute-naming-style=any
+
+# Regular expression matching correct class attribute names
+class-attribute-rgx=[a-z_][a-z0-9_]{2,30}$
+
+# Naming style matching correct class constant names
+class-const-naming-style=UPPER_CASE
+
+# Regular expression matching correct class constant names
+class-const-rgx=[A-Z_][A-Z0-9_]{2,30}$
+
+# Naming style matching correct class names
+class-naming-style=PascalCase
+
+# Regular expression matching correct class names
+class-rgx=[A-Z][a-zA-Z0-9]+$
+
+# Naming style matching correct constant names
+const-naming-style=UPPER_CASE
+
+# Regular expression matching correct constant names
+const-rgx=[A-Z_][A-Z0-9_]{2,30}$
+
+# Minimum line length for functions, classes, and imports
+min-similarity-lines=4
+
+# Naming style matching correct function names
+function-naming-style=snake_case
+
+# Regular expression matching correct function names
+function-rgx=[a-z_][a-z0-9_]{2,30}$
+
+# Good variable names which should always be accepted
+good-names=i,
+           j,
+           k,
+           ex,
+           Run,
+           _,
+           id,
+           db,
+           np,
+           cv2
+
+# Include a hint for the correct naming format with invalid-name
+include-naming-hint=no
+
+# Naming style matching correct inline iteration names
+inlinevar-naming-style=any
+
+# Regular expression matching correct inline iteration names
+inlinevar-rgx=[a-z_][a-z0-9_]{2,30}$
+
+# Naming style matching correct method names
+method-naming-style=snake_case
+
+# Regular expression matching correct method names
+method-rgx=[a-z_][a-z0-9_]{2,30}$
+
+# Naming style matching correct module names
+module-naming-style=snake_case
+
+# Regular expression matching correct module names
+module-rgx=(([a-z_][a-z0-9_]*)|([A-Z][a-zA-Z0-9]+))$
+
+# Colon-delimited sets of names that determine each other's naming style
+name-group=
+
+# Regular expression which should only match function or class names that do
+# not require a docstring
+no-docstring-rgx=^_
+
+# List of decorators that produce properties
+property-classes=abc.abstractproperty
+
+# Naming style matching correct variable names
+variable-naming-style=snake_case
+
+# Regular expression matching correct variable names
+variable-rgx=[a-z_][a-z0-9_]{2,30}$
+
+[IMPORTS]
+# Allow wildcard imports from modules that define __all__
+allow-wildcard-with-all=no
+
+# Analyse import fallback blocks
+analyse-fallback-blocks=no
+
+# Allow unoptimized imports
+allow-any-import-level=no
+
+# Allow boolean values in imports
+allow-any-import-level=no
+
+# Ignore import statements themselves when computing similarities
+ignore-imports=no
+
+# Force import order to recognize a module as part of the standard
+# library
+known-standard-library=
+
+# Force import order to recognize a module as part of a third party library
+known-third-party=opencv-python,numpy,Pillow,fastapi,uvicorn,pytest
+
+# Couples of modules and preferred modules, separated by a comma
+preferred-modules=
+
+[DESIGN]
+# List of regular expressions of class ancestor names to ignore when counting
+# public methods
+exclude-too-few-public-methods=
+
+# List of qualified class names to ignore when counting class parents
+ignored-parents=
+
+# Maximum number of arguments for function / method
+max-args=10
+
+# Maximum number of attributes for a class
+max-attributes=10
+
+# Maximum number of boolean expressions in an if statement
+max-bool-expr=5
+
+# Maximum number of branch for function / method body
+max-branches=15
+
+# Maximum number of locals for function / method body
+max-locals=20
+
+# Maximum number of parents for a class
+max-parents=7
+
+# Maximum number of public methods for a class
+max-public-methods=20
+
+# Maximum number of return / yield for function / method body
+max-returns=6
+
+# Maximum number of statements in function / method body
+max-statements=50
+
+# Minimum number of public methods for a class
+min-public-methods=0
+
+[EXCEPTIONS]
+# Exceptions that will emit a warning when being caught
+overgeneral-exceptions=BaseException,
+                       Exception
+
