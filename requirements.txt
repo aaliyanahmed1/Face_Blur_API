@@ -3,7 +3,6 @@ fastapi==0.104.1
 uvicorn[standard]==0.24.0
 python-multipart==0.0.6
 pydantic==2.5.0
-pydantic-settings==2.1.0
 
 # Computer Vision
 opencv-python==4.8.1.78
@@ -20,7 +19,7 @@ httpx==0.25.2
 black==23.11.0
 flake8==6.1.0
 mypy==1.7.1
-types-Pillow==10.1.0.20231118
+types-Pillow==10.1.0.2
 safety==2.3.5
 
 # Logging
